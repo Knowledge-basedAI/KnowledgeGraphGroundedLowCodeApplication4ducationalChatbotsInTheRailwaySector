@@ -1,0 +1,292 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://ontologies.metaphacts.com/combinedontology/0.1/graph> {
+  <https://ontologies.metaphacts.com/chatbot-ontology/AnswerShape> a sh:NodeShape;
+    sh:property [
+        sh:class <https://ontologies.metaphacts.com/teaching-ontology/Task>;
+        sh:path <https://ontologies.metaphacts.com/combinedontology/isCheckedWith>
+      ];
+    sh:targetClass <https://ontologies.metaphacts.com/chatbot-ontology/Answer> .
+  
+  <https://ontologies.metaphacts.com/chatbot-ontology/TaskIntentShape> a sh:NodeShape;
+    sh:property [
+        sh:class <https://ontologies.metaphacts.com/teaching-ontology/Task>;
+        sh:path <https://ontologies.metaphacts.com/combinedontology/refersToTask>
+      ];
+    sh:targetClass <https://ontologies.metaphacts.com/chatbot-ontology/TaskIntent> .
+  
+  <https://ontologies.metaphacts.com/chatbot-ontology/TranslationIntentShape> a sh:NodeShape;
+    sh:property [
+        sh:class <https://ontologies.metaphacts.com/teaching-ontology/Lesson>;
+        sh:path <https://ontologies.metaphacts.com/combinedontology/refersToLesson>
+      ];
+    sh:targetClass <https://ontologies.metaphacts.com/chatbot-ontology/TranslationIntent> .
+  
+  <https://ontologies.metaphacts.com/combinedontology/0.1> a owl:Ontology;
+    dct:contributor "admin";
+    dct:created "2025-10-17T09:15:42.170Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    dct:creator "admin";
+    dct:title "CombinedOntology"@en;
+    <http://purl.org/ontology/bibo/status> <http://purl.org/spar/pso/draft>;
+    <http://www.linkedmodel.org/1.2/schema/vaem#namespace> <https://ontologies.metaphacts.com/combinedontology/>;
+    rdfs:label "CombinedOntology"@en;
+    owl:imports <https://ontologies.metaphacts.com/chatbot-ontology/0.1>, <https://ontologies.metaphacts.com/teaching-ontology/0.1>;
+    owl:versionInfo "0.1";
+    <http://open-services.net/ns/core#modifiedBy> "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://ontologies.metaphacts.com/combinedontology/canBeAdressedByLessonIntent> a
+      owl:ObjectProperty;
+    rdfs:isDefinedBy <https://ontologies.metaphacts.com/combinedontology/0.1>;
+    rdfs:label "canBeAdressedByLessonIntent"@en;
+    <http://open-services.net/ns/core#modifiedBy> "admin";
+    dct:contributor "admin";
+    dct:created "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    dct:creator "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://ontologies.metaphacts.com/combinedontology/canBeAdressedByTaskIntent> a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://ontologies.metaphacts.com/combinedontology/0.1>;
+    rdfs:label "canBeAdressedByTaskIntent"@en;
+    <http://open-services.net/ns/core#modifiedBy> "admin";
+    dct:contributor "admin";
+    dct:created "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    dct:creator "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://ontologies.metaphacts.com/combinedontology/isCheckedWith> a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://ontologies.metaphacts.com/combinedontology/0.1>;
+    rdfs:label "isCheckedWith"@en;
+    <http://open-services.net/ns/core#modifiedBy> "admin";
+    dct:contributor "admin";
+    dct:created "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    dct:creator "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://ontologies.metaphacts.com/combinedontology/isFormOf> a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://ontologies.metaphacts.com/combinedontology/0.1>;
+    rdfs:label "isFormOf"@en;
+    <http://open-services.net/ns/core#modifiedBy> "admin";
+    dct:contributor "admin";
+    dct:created "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    dct:creator "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://ontologies.metaphacts.com/combinedontology/refersToLesson> a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://ontologies.metaphacts.com/combinedontology/0.1>;
+    rdfs:label "refersToLesson"@en;
+    <http://open-services.net/ns/core#modifiedBy> "admin";
+    dct:contributor "admin";
+    dct:created "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    dct:creator "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://ontologies.metaphacts.com/combinedontology/refersToTask> a owl:ObjectProperty;
+    rdfs:isDefinedBy <https://ontologies.metaphacts.com/combinedontology/0.1>;
+    rdfs:label "refersToTask"@en;
+    <http://open-services.net/ns/core#modifiedBy> "admin";
+    dct:contributor "admin";
+    dct:created "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    dct:creator "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://ontologies.metaphacts.com/teaching-ontology/LessonShape> a sh:NodeShape;
+    sh:property [
+        sh:class <https://ontologies.metaphacts.com/chatbot-ontology/TranslationIntent>;
+        sh:path <https://ontologies.metaphacts.com/combinedontology/canBeAdressedByLessonIntent>
+      ];
+    sh:targetClass <https://ontologies.metaphacts.com/teaching-ontology/Lesson> .
+  
+  <https://ontologies.metaphacts.com/teaching-ontology/TaskShape> a sh:NodeShape;
+    sh:property [
+        sh:class <https://ontologies.metaphacts.com/chatbot-ontology/TaskIntent>;
+        sh:path <https://ontologies.metaphacts.com/combinedontology/canBeAdressedByTaskIntent>
+      ], [
+        sh:class <https://ontologies.metaphacts.com/chatbot-ontology/Question>;
+        sh:path <https://ontologies.metaphacts.com/combinedontology/isFormOf>
+      ];
+    sh:targetClass <https://ontologies.metaphacts.com/teaching-ontology/Task> .
+  
+  <https://ontologies.metaphacts.com/chatbot-ontology/Answer> <http://open-services.net/ns/core#modifiedBy>
+      "admin";
+    dct:contributor "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://ontologies.metaphacts.com/chatbot-ontology/TaskIntent> <http://open-services.net/ns/core#modifiedBy>
+      "admin";
+    dct:contributor "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://ontologies.metaphacts.com/chatbot-ontology/TranslationIntent> <http://open-services.net/ns/core#modifiedBy>
+      "admin";
+    dct:contributor "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://ontologies.metaphacts.com/teaching-ontology/Lesson> <http://open-services.net/ns/core#modifiedBy>
+      "admin";
+    dct:contributor "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+  
+  <https://ontologies.metaphacts.com/teaching-ontology/Task> <http://open-services.net/ns/core#modifiedBy>
+      "admin";
+    dct:contributor "admin";
+    dct:modified "2025-10-17T09:32:06.364Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+}
+
+<http://localhost:10214/container/ontodiaDiagramContainer/mjWvvntztNBMcnXcmEOsmewdGlMeBnnPGHDCQSfG/context> {
+  <http://localhost:10214/container/ontodiaDiagramContainer/mjWvvntztNBMcnXcmEOsmewdGlMeBnnPGHDCQSfG>
+    a <http://www.w3.org/ns/ldp#Resource>, <http://www.w3.org/ns/prov#Entity>, <http://ontodia.org/schema/v1#Diagram>;
+    rdfs:label "Default Diagram";
+    <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.metaphacts.com/resource/user/admin>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2025-10-17T09:32:13.016Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://ontodia.org/schema/v1#layoutData> [ a <http://ontodia.org/schema/v1#Layout>;
+        <http://ontodia.org/schema/v1#hasElement> <http://ontodia.org/data/e_09abb592659224d510b9e8f9bc133b92>,
+          <http://ontodia.org/data/e_f1efa4baeaf11b4e2674427ae2fc3a5c>, <http://ontodia.org/data/e_91d7e77ff6339f9d7061762fd1ae32af>,
+          <http://ontodia.org/data/e_b3ec64c7c1a8a17f4be3a6732177e156>, <http://ontodia.org/data/e_7c4eae2ddd80b501c61daacf71d55ed4>,
+          <http://ontodia.org/data/e_c4d0d76eb7274f93840a37ef90cc2547>;
+        <http://ontodia.org/schema/v1#hasLink> <http://ontodia.org/data/l_92fb3eacfd690f1a2faa60803cf263dc>,
+          <http://ontodia.org/data/l_165abec1733e49df808973cb6134d925>, <http://ontodia.org/data/l_30dde7a25b3c5215be86e7aa45b36b40>,
+          <http://ontodia.org/data/l_6dcdfcacbe2d4f83970a62899cdd9d6b>, <http://ontodia.org/data/l_a9d6e23246d8aa216ed475031bcb6e67>,
+          <http://ontodia.org/data/l_c20637750ed3837540794d19257738d7>, <http://ontodia.org/data/l_348a553a806dd9ff0283df6c81bfae06>,
+          <http://ontodia.org/data/l_6fae390c242b104e34962afec5fc35aa>, <http://ontodia.org/data/l_62346b0ce3a92d0396ed09cf33e95c8d>,
+          <http://ontodia.org/data/l_77829b53e9bb9ae2b66bbe50087be8af>
+      ];
+    <http://ontodia.org/schema/v1#linkTypeOptions> [ a <http://ontodia.org/schema/v1#LinkTypeOptions>;
+        <http://ontodia.org/schema/v1#property> <http://www.metaphacts.com/metaschema#relation-owl>;
+        <http://ontodia.org/schema/v1#showLabel> true;
+        <http://ontodia.org/schema/v1#visible> false
+      ];
+    <http://www.metaphacts.com/ontologies/platform#diagramForOntology> <https://ontologies.metaphacts.com/combinedontology/0.1>;
+    <http://www.metaphacts.com/ontologies/platform#diagramKind> <http://www.metaphacts.com/ontologies/platform#OntologyDiagram>;
+    <http://www.metaphacts.com/ontologies/platform#isDefaultDiagram> "true" .
+  
+  <http://ontodia.org/data/e_09abb592659224d510b9e8f9bc133b92> a <http://ontodia.org/schema/v1#Element>;
+    <http://ontodia.org/schema/v1#elementState> [];
+    <http://ontodia.org/schema/v1#isExpanded> false;
+    <http://ontodia.org/schema/v1#position> [
+        <http://ontodia.org/schema/v1#xCoordValue> -2.428994814995474E2;
+        <http://ontodia.org/schema/v1#yCoordValue> -1.1416774501611815E2
+      ];
+    <http://ontodia.org/schema/v1#resource> <https://ontologies.metaphacts.com/chatbot-ontology/Answer> .
+  
+  <http://ontodia.org/data/e_f1efa4baeaf11b4e2674427ae2fc3a5c> a <http://ontodia.org/schema/v1#Element>;
+    <http://ontodia.org/schema/v1#elementState> [];
+    <http://ontodia.org/schema/v1#isExpanded> false;
+    <http://ontodia.org/schema/v1#position> [
+        <http://ontodia.org/schema/v1#xCoordValue> 63;
+        <http://ontodia.org/schema/v1#yCoordValue> -1
+      ];
+    <http://ontodia.org/schema/v1#resource> <https://ontologies.metaphacts.com/chatbot-ontology/Question> .
+  
+  <http://ontodia.org/data/e_91d7e77ff6339f9d7061762fd1ae32af> a <http://ontodia.org/schema/v1#Element>;
+    <http://ontodia.org/schema/v1#elementState> [];
+    <http://ontodia.org/schema/v1#isExpanded> false;
+    <http://ontodia.org/schema/v1#position> [
+        <http://ontodia.org/schema/v1#xCoordValue> -605;
+        <http://ontodia.org/schema/v1#yCoordValue> -29
+      ];
+    <http://ontodia.org/schema/v1#resource> <https://ontologies.metaphacts.com/teaching-ontology/Task> .
+  
+  <http://ontodia.org/data/e_b3ec64c7c1a8a17f4be3a6732177e156> a <http://ontodia.org/schema/v1#Element>;
+    <http://ontodia.org/schema/v1#elementState> [];
+    <http://ontodia.org/schema/v1#isExpanded> false;
+    <http://ontodia.org/schema/v1#position> [
+        <http://ontodia.org/schema/v1#xCoordValue> -286;
+        <http://ontodia.org/schema/v1#yCoordValue> -288
+      ];
+    <http://ontodia.org/schema/v1#resource> <https://ontologies.metaphacts.com/chatbot-ontology/TranslationIntent> .
+  
+  <http://ontodia.org/data/e_7c4eae2ddd80b501c61daacf71d55ed4> a <http://ontodia.org/schema/v1#Element>;
+    <http://ontodia.org/schema/v1#elementState> [];
+    <http://ontodia.org/schema/v1#isExpanded> false;
+    <http://ontodia.org/schema/v1#position> [
+        <http://ontodia.org/schema/v1#xCoordValue> -6.635520374109263E2;
+        <http://ontodia.org/schema/v1#yCoordValue> 2.2384356649417498E2
+      ];
+    <http://ontodia.org/schema/v1#resource> <https://ontologies.metaphacts.com/chatbot-ontology/TaskIntent> .
+  
+  <http://ontodia.org/data/l_92fb3eacfd690f1a2faa60803cf263dc> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#resource> <https://ontologies.metaphacts.com/chatbot-ontology/hasAnswer>;
+    <http://ontodia.org/schema/v1#property> <http://www.metaphacts.com/metaschema#relation>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_f1efa4baeaf11b4e2674427ae2fc3a5c>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_09abb592659224d510b9e8f9bc133b92>;
+    <http://ontodia.org/schema/v1#vertex> rdf:nil .
+  
+  <http://ontodia.org/data/e_c4d0d76eb7274f93840a37ef90cc2547> a <http://ontodia.org/schema/v1#Element>;
+    <http://ontodia.org/schema/v1#elementState> [];
+    <http://ontodia.org/schema/v1#isExpanded> false;
+    <http://ontodia.org/schema/v1#position> [
+        <http://ontodia.org/schema/v1#xCoordValue> -6.786732512936885E2;
+        <http://ontodia.org/schema/v1#yCoordValue> -2.4189044121847087E2
+      ];
+    <http://ontodia.org/schema/v1#resource> <https://ontologies.metaphacts.com/teaching-ontology/Lesson> .
+  
+  <http://ontodia.org/data/l_165abec1733e49df808973cb6134d925> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#resource> <https://ontologies.metaphacts.com/chatbot-ontology/requestsTask>;
+    <http://ontodia.org/schema/v1#property> <http://www.metaphacts.com/metaschema#relation>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_f1efa4baeaf11b4e2674427ae2fc3a5c>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_7c4eae2ddd80b501c61daacf71d55ed4>;
+    <http://ontodia.org/schema/v1#vertex> rdf:nil .
+  
+  <http://ontodia.org/data/l_30dde7a25b3c5215be86e7aa45b36b40> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#resource> <https://ontologies.metaphacts.com/chatbot-ontology/aboutLesson>;
+    <http://ontodia.org/schema/v1#property> <http://www.metaphacts.com/metaschema#relation>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_f1efa4baeaf11b4e2674427ae2fc3a5c>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_b3ec64c7c1a8a17f4be3a6732177e156>;
+    <http://ontodia.org/schema/v1#vertex> rdf:nil .
+  
+  <http://ontodia.org/data/l_6dcdfcacbe2d4f83970a62899cdd9d6b> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#resource> <https://ontologies.metaphacts.com/teaching-ontology/isPartOfLesson>;
+    <http://ontodia.org/schema/v1#property> <http://www.metaphacts.com/metaschema#relation>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_91d7e77ff6339f9d7061762fd1ae32af>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_c4d0d76eb7274f93840a37ef90cc2547>;
+    <http://ontodia.org/schema/v1#vertex> rdf:nil .
+  
+  <http://ontodia.org/data/l_a9d6e23246d8aa216ed475031bcb6e67> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#resource> <http://ontodia.org/schema/v1#blank:rdf:b86a1f50-42f3-4fc9-8d6e-9de3ad9a5381>;
+    <http://ontodia.org/schema/v1#property> <http://www.metaphacts.com/metaschema#relation>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_7c4eae2ddd80b501c61daacf71d55ed4>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_91d7e77ff6339f9d7061762fd1ae32af>;
+    <http://ontodia.org/schema/v1#vertex> rdf:nil .
+  
+  <http://ontodia.org/data/l_c20637750ed3837540794d19257738d7> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#resource> <http://ontodia.org/schema/v1#blank:rdf:1d3761cb-dad5-4262-b1f8-a63dd264ed9c>;
+    <http://ontodia.org/schema/v1#property> <http://www.metaphacts.com/metaschema#relation>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_91d7e77ff6339f9d7061762fd1ae32af>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_7c4eae2ddd80b501c61daacf71d55ed4>;
+    <http://ontodia.org/schema/v1#vertex> rdf:nil .
+  
+  <http://ontodia.org/data/l_348a553a806dd9ff0283df6c81bfae06> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#resource> <http://ontodia.org/schema/v1#blank:rdf:dab0f4c6-1a1f-4383-8528-4c1ccc947300>;
+    <http://ontodia.org/schema/v1#property> <http://www.metaphacts.com/metaschema#relation>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_09abb592659224d510b9e8f9bc133b92>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_91d7e77ff6339f9d7061762fd1ae32af>;
+    <http://ontodia.org/schema/v1#vertex> rdf:nil .
+  
+  <http://ontodia.org/data/l_6fae390c242b104e34962afec5fc35aa> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#resource> <http://ontodia.org/schema/v1#blank:rdf:a96fd6ab-0f74-4b33-b9ca-80459b3f1143>;
+    <http://ontodia.org/schema/v1#property> <http://www.metaphacts.com/metaschema#relation>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_91d7e77ff6339f9d7061762fd1ae32af>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_f1efa4baeaf11b4e2674427ae2fc3a5c>;
+    <http://ontodia.org/schema/v1#vertex> rdf:nil .
+  
+  <http://ontodia.org/data/l_62346b0ce3a92d0396ed09cf33e95c8d> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#resource> <http://ontodia.org/schema/v1#blank:rdf:3565ca76-1d4b-465e-a44b-c131dfc90292>;
+    <http://ontodia.org/schema/v1#property> <http://www.metaphacts.com/metaschema#relation>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_b3ec64c7c1a8a17f4be3a6732177e156>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_c4d0d76eb7274f93840a37ef90cc2547>;
+    <http://ontodia.org/schema/v1#vertex> rdf:nil .
+  
+  <http://ontodia.org/data/l_77829b53e9bb9ae2b66bbe50087be8af> a <http://ontodia.org/schema/v1#Link>;
+    <http://ontodia.org/schema/v1#resource> <http://ontodia.org/schema/v1#blank:rdf:33be5e93-8ecd-49ce-b101-dfc26e59b9d1>;
+    <http://ontodia.org/schema/v1#property> <http://www.metaphacts.com/metaschema#relation>;
+    <http://ontodia.org/schema/v1#source> <http://ontodia.org/data/e_c4d0d76eb7274f93840a37ef90cc2547>;
+    <http://ontodia.org/schema/v1#target> <http://ontodia.org/data/e_b3ec64c7c1a8a17f4be3a6732177e156>;
+    <http://ontodia.org/schema/v1#vertex> rdf:nil .
+  
+  [] <http://www.w3.org/ns/ldp#contains> <http://localhost:10214/container/ontodiaDiagramContainer/mjWvvntztNBMcnXcmEOsmewdGlMeBnnPGHDCQSfG> .
+}
